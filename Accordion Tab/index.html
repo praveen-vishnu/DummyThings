@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Vertical Tabs to Accordion</title>
+    <meta name="description" content="DESCRIPTIONHERE" />
+    <meta name="author" content="Frontendscript" />
+
+    <!--Only for demo purpose - no need to add.-->
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/easyResponsiveTabs.js"></script>
+</head>
+
+<body>
+
+
+    <section>
+        <div class="rt-container">
+            <div class="col-rt-12">
+                <div class="Scriptcontent">
+                    <br>
+                    <br>
+                    <br>
+                    <!--Horizontal Tab-->
+                    <div id="parentHorizontalTab">
+                        <ul class="resp-tabs-list hor_1">
+                            <li>Configure Usage</li>
+                            <li>Setup UIOLI</li>
+                            <li>Review Data</li>
+                        </ul>
+                        <div class="resp-tabs-container hor_1">
+                            <div>
+                                <p>
+                                    <!--vertical Tabs-->
+
+                                <div id="ChildVerticalTab_1">
+                                    <ul class="resp-tabs-list ver_1">
+                                        <li>Auth Config</li>
+                                        <li>Web Access Config</li>
+                                        <li>3rd Party</li>
+                                        <li>Custom Logs </li>
+                                        <li>DB</li>
+                                    </ul>
+                                    <div class="resp-tabs-container ver_1">
+                                        <div>
+                                            <!-- Auth Config Section -->
+                                            <div class="auth-config-section">
+                                                <div class="auth-config">
+                                                    <h3>Auth Config</h3>
+                                                    <label>
+                                                        <input type="checkbox" checked disabled>
+                                                        OIDC
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        Ping
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" checked disabled>
+                                                        Kerberos
+                                                    </label>
+
+                                                </div>
+
+                                                <div class="collected-data border-dash">
+                                                    <h3>Collected Data</h3>
+                                                    <label>
+                                                        <input type="checkbox" checked disabled>
+                                                        OIDC
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" checked disabled>
+                                                        Kerberos
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <!-- GRN Section -->
+                                            <div class="border-dash m-2  p-2">
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Auth Shared with other app
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="grn-section">
+                                                <label for="grn-list">GRN List</label>
+                                                <input class="form-control form-control-lg" type="text"
+                                                    placeholder="1234,7896" aria-label=".form-control-lg example">
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="tab-content web-access-section">
+                                            <div class="container">
+                                                <!-- Row 1: Application and Log File Configuration -->
+                                                <div class="row mb-4">
+                                                    <div class="col-lg-6">
+                                                        <!-- Application is Internal Web Based -->
+                                                        <div class="form-check checkbox-label">
+                                                            <input class="form-check-input ms-0" type="checkbox"
+                                                                value="" id="internalWebBased">
+                                                            <label class="form-check-label"
+                                                                for="internalWebBased">Application is Internal Web
+                                                                Based</label>
+                                                        </div>
+
+                                                        <!-- Configured Log File Location -->
+                                                        <div class="mt-3 section-box">
+                                                            <h6>Configured Log File Location</h6>
+                                                            <textarea class="form-control" id="logFileLocation" rows="3"
+                                                                placeholder="/asd/asdf/asdf /asdf/asdf/asdf"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <!-- Collected Data - Servers -->
+                                                        <div class="section-box h-100">
+                                                            <h6>Collected Data</h6>
+                                                            <div class="collected-data">
+                                                                <p><strong>Apache</strong> Server 1</p>
+                                                                <p><strong>Apache</strong> Server 2</p>
+                                                                <p><strong>Tomcat</strong></p>
+                                                                <p><strong>IIS</strong></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="tab-content web-access-section">
+                                            <div class="container">
+                                                <div class="section-box">
+                                                    <div class="form-check checkbox-label mb-3">
+                                                        <input class="form-check-input ms-0" type="checkbox" value=""
+                                                            id="thirdPartyExternal">
+                                                        <label class="form-check-label" for="thirdPartyExternal">
+                                                            3rd Party External – Example: External Web Sites, SAAS Tools,
+                                                            Thick Client Apps Connecting to External Services
+                                                        </label>
+                                                    </div>
+    
+                                                    <!-- List of URLs -->
+                                                    <div class="mb-3">
+                                                        <label for="urlList" class="form-label">List of URL's</label>
+                                                        <textarea class="form-control" id="urlList" rows="3"
+                                                            placeholder="Enter URLs here"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content web-access-section">
+                                            <!-- Configure Custom Logs Section -->
+                                            <div class="section-box">
+                                                <div class="form-check checkbox-label mb-3">
+                                                    <input class="form-check-input  ms-0" type="checkbox" value=""
+                                                        id="configureCustomLogs">
+                                                    <label class="form-check-label" for="configureCustomLogs">Configure
+                                                        Custom Logs</label>
+                                                </div>
+
+                                                <!-- Log Files Conforming to Standard Format -->
+                                                <div class="mb-3">
+                                                    <label for="logStandardFormat" class="form-label">Log Files
+                                                        Conforming to Standard Format</label>
+                                                    <input type="text" class="form-control" id="logStandardFormat"
+                                                        value="/asd/asd/aaa">
+                                                </div>
+
+                                                <!-- Log Files Custom Format -->
+                                                <div class="mb-3">
+                                                    <label for="logCustomFormat" class="form-label">Log Files Custom
+                                                        Format</label>
+                                                    <input type="text" class="form-control" id="logCustomFormat"
+                                                        value="/asd/asd/aaa :: 'search Pattern'">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content web-access-section">
+                                            <!--  DB Activity -->
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <!-- Usage indicated in DB Activity -->
+                                                    <div class="form-check checkbox-label">
+                                                        <input class="form-check-input ms-0" type="checkbox" value=""
+                                                            id="dbActivity">
+                                                        <label class="form-check-label" for="dbActivity">Usage indicated
+                                                            in DB Activity</label>
+                                                    </div>
+
+                                                    <!-- Data Collected from TAI Linked DB -->
+                                                    <div class="mt-3 section-box">
+                                                        <h6>Data collected from TAI Linked DB</h6>
+                                                        <textarea class="form-control" id="dbActivityDetails" rows="3"
+                                                            placeholder="Enter details..."></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6">
+                                                    <!-- Collected Data - DB Servers -->
+                                                    <div class="section-box h-100">
+                                                        <h6>Collected Data</h6>
+                                                        <div class="collected-data">
+                                                            <p><strong>DB2</strong> Server 1</p>
+                                                            <p><strong>Sybase</strong> Server 2</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </p>
+                                <p>Tab 1 Container</p>
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod
+                                ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales
+                                scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis,
+                                ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
+                                <br>
+                                <br>
+                                <p>Tab 2 Container</p>
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod
+                                ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales
+                                scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis,
+                                ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
+                                <br>
+                                <br>
+                                <p>Tab 3 Container</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="nested-tabInfo">
+                        Selected tab: <span class="tabName"></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Plug-in Initialisation-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Horizontal Tab
+            $('#parentHorizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true, // 100% fit in a container
+                tabidentify: 'hor_1', // The tab groups identifier
+                activate: function (event) { // Callback function if tab is switched
+                    var $tab = $(this);
+                    var $info = $('#nested-tabInfo');
+                    var $name = $('span', $info);
+                    $name.text($tab.text());
+                    $info.show();
+                }
+            });
+
+            // Child Tab
+            $('#ChildVerticalTab_1').easyResponsiveTabs({
+                type: 'vertical',
+                width: 'auto',
+                fit: true,
+                tabidentify: 'ver_1', // The tab groups identifier
+                activetab_bg: '#fff', // background color for active tabs in this group
+                inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
+                active_border_color: '#c1c1c1', // border color for active tabs heads in this group
+                active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
+            });
+
+            //Vertical Tab
+            $('#parentVerticalTab').easyResponsiveTabs({
+                type: 'vertical', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true, // 100% fit in a container
+                closed: 'accordion', // Start closed if in accordion view
+                tabidentify: 'hor_1', // The tab groups identifier
+                activate: function (event) { // Callback function if tab is switched
+                    var $tab = $(this);
+                    var $info = $('#nested-tabInfo2');
+                    var $name = $('span', $info);
+                    $name.text($tab.text());
+                    $info.show();
+                }
+            });
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
